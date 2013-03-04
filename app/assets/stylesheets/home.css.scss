@@ -1,0 +1,27 @@
+#playlists-container, #search-container {
+  overflow: auto;
+}
+
+#playlists-container {
+  border-right: 1px solid #555;
+  padding: 0 0 0 10px;
+
+  button, h3 {
+    float: left;
+  }
+
+  button {
+    margin: 14px 0 0 10px;
+  }
+}
+
+#search-container {
+  input[type="text"] {
+    width: 200px;
+  }
+
+  form {
+    margin: 15px auto 0;
+    width: 315px;
+  }
+}

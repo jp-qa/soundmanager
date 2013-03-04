@@ -1,0 +1,21 @@
+#main{:role => "main"}
+  .container
+    .content
+      .row-fluid
+        #playlists-container.span4{:"ng-controller" => "PlaylistCtrl"}
+          %h3 Playlists
+          %button.btn{:"ng-click" => "addPlaylist()"}
+            %i.icon-plus-sign{:"ng-click" => "addPlaylist()"}
+          %ul#playlists.unstyled
+            %li.playlist{:"ng-repeat" => "playlist in playlists"}
+        #search-container.row.span8{:"ng-controller" => "SearchCtrl"}
+          %form.form-search{:"ng-submit" => "search()"}
+            %input.search-query{type: "text", :"ng-model" => "query", placeholder: "Search for a song"}
+            %button.btn{type: "submit"} Search
+          %ul#results.unstyled
+            %li.result{:"ng-repeat" => "result in results"}
+              {{result.title}}
+            / %button{:"ng-click" => "test()"} Test
+            %img{src: "assets/loading.gif", :"ng-show" => "loading"}
+
+      %footer
